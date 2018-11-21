@@ -1,6 +1,6 @@
 
 
-	.goods_boxs a{
+	.goods_boxs a,.goods_title a, .footer a{
 		text-decoration:none;
 	}
 
@@ -9,19 +9,16 @@
 		background-color:#fff;
 	}
 
-	.goods_title a{
-		text-decoration: none;
-	}
-
 	.goods_title_content{
 		border: 1px solid #a5a5a5;
 		padding: .3125rem 1rem;
 	}
 
-	.nav_ul li a:hover{
+	.nav_ul li a:hover,.footer a:hover{
 		color:#707070 !important;
 	}
 	
+	/*下拉列表特效*/
 	.uk-dropdown{
 		opacity:0.95;
 		border-radius:.2rem;
@@ -33,19 +30,23 @@
 		color:#fff !important;
 	}
 
+	/*底部背景颜色*/
 	.footer{
 		background:#f7f7f7;
 	}
 
+	/*底部关于的标题样式*/
 	.about_title{
 		font-family:times new roman;
 		letter-spacing:3px;
 	}
 
+	/*底部小标题*/
 	.small_title{
 		font-size:.1rem;
 	}
 
+	/*滚动监听导航条样式*/
 	.full{ 
 		position: fixed;
 		top: 0;
