@@ -11,125 +11,119 @@
 	<link rel="stylesheet" type="text/css" href="uikit/css/components/dotnav.css">
 </head>
 <body>
-	<div class="header uk-text-small">   
-		<nav class="uk-navbar">
-			<div class="uk-width-medium-1-2 uk-container-center">
-				<div class="uk-navbar-content">
-			    	<i class="uk-icon-phone uk-icon-small"></i>
-			    	&nbsp;<span class="uk-text-muted">0028-28376728</span>
-			    </div>
-
-			    <div class="uk-navbar-content">
-			    	<i class="uk-icon-clock-o uk-icon-small"></i>
-			    	&nbsp;<span class="uk-text-muted">在线时间 08:30~21:30</span>
-			    </div>
-
-			    <nav class="uk-navbar user_cart">
-				    <div class="uk-navbar-flip">
-				        <ul class="uk-navbar-nav">
-				            <li>
-				            	<a href="#">
-				            		<i class="uk-icon-user uk-icon-small" style="cursor: pointer;"></i>
-				            	</a>
-				            </li>
-
-				             <li>
-				            	<a data-uk-offcanvas="{target:'#left_search'}">
-				            		<i class="uk-icon-search uk-icon-small"></i>
-				            	</a>
-				            </li>
-				        </ul>
-				    </div>
-				</nav>
-
-				<div class="search">
-					<!-- 这是抽屉边栏 -->
-					<div id="left_search" class="uk-offcanvas">
-					    <div class="uk-offcanvas-bar">
-					        <form class="uk-search" data-uk-search="{source:'my-results.json'}">
-							    <input class="uk-search-field" type="search" placeholder="店铺名">
-							    <!-- 这是通过JavaScript注入了搜索结果的下拉菜单 -->
-							    <div class="uk-dropdown uk-dropdown-search">
-							        <ul class="uk-nav uk-nav-search">
-							        	<li>123</li>
-							        </ul>
-							    </div>
-							</form>
-					    </div>
-					</div>
-				</div>
-
+	<div class="uk-width-medium-1-1 header">
+		<nav class="uk-navbar uk-width-medium-2-3 uk-container-center">
+	        <div class="uk-navbar-content">
+				<i class="uk-text-contrast uk-icon-phone uk-icon-small"></i>
+				&nbsp;<span class="uk-text-contrast">0028-28376728</span>
 			</div>
-		</nav>
+
+			<div class="uk-navbar-content">
+				<i class="uk-icon-clock-o uk-text-contrast uk-icon-small"></i>
+				&nbsp;<span class="uk-text-contrast">在线时间 08:30~21:30</span>
+			</div>
+
+	        <div class="uk-navbar-flip">
+	            <ul class="uk-navbar-nav">
+	                <li>
+					    <a href="login.html">
+					       	<i class="uk-icon-user uk-text-contrast uk-icon-small"></i>
+					    </a>
+					</li>
+
+					<li>
+					    <a data-uk-offcanvas="{target:'#search'}">
+					       	<i class="uk-icon-search uk-text-contrast uk-icon-small"></i>
+					    </a>
+					</li>
+	            </ul>
+	        </div>
+	    </nav>
+
+			
+		
+			<!-- 这是抽屉边栏 -->
+		<div id="search" class="uk-offcanvas">
+			<div class="uk-offcanvas-bar search_box">
+				<form class="uk-search" data-uk-search="{source:'content.json'}">
+					<input class="uk-search-field" type="search" placeholder="店铺名">
+						<!-- 这是通过JavaScript注入了搜索结果的下拉菜单 -->
+					<div class="uk-dropdown uk-dropdown-search">
+						<ul class="uk-nav uk-nav-search">
+							<li></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<div class="uk-margin-large-top logo_nav">
-		<div class="uk-text-center logo">
-			<img class="uk-border-circle uk-img-preserve" src="images/logo.png" width="100px" height="100px">
+		<div class="uk-text-center uk-margin-large-bottom logo">
+			<img class="uk-border-circle uk-img-preserve" src="images/logo.png" width="100" height="100">
 		</div>
 
-		<div class="uk-width-medium-1-2 uk-container-center uk-margin-top uk-margin-bottom nav">
+		<div class="uk-width-medium-1-2 uk-container-center uk-margin-top nav">
 			<ul class="uk-grid uk-grid-width-1-6 uk-subnav nav_ul">
 			   	<li class="uk-text-center"><a href="#" class="uk-text-muted">首页</a></li>
 			    <li class="uk-text-center" data-uk-dropdown="{mode:'hover',pos:'bottom-center'}">
-			    	<a class="uk-text-muted" href="#">宠物分类</a>
+			    	<a class="uk-text-muted" href="#">商品分类</a>
 			    	<div class="uk-dropdown uk-dropdown-small">
 			            <ul class="uk-nav uk-nav-dropdown">
-			            	<li><a class="uk-text-muted" href="#">啮齿类</a></li>
-			                <li><a class="uk-text-muted" href="#">猫狗类</a></li>
-			                <li><a class="uk-text-muted" href="#">水族</a></li>
-			                <li><a class="uk-text-muted" href="#">鸟类</a></li>
-			                <li><a class="uk-text-muted" href="#">虫类</a></li>
-			                <li><a class="uk-text-muted" href="#">爬行类</a></li>
-			 				<li><a class="uk-text-muted" href="#">花卉</a></li>
+			            	<li><a class="uk-text-muted" href="login.html">水果</a></li>
+			                <li><a class="uk-text-muted" href="#">蔬菜</a></li>
+			                <li><a class="uk-text-muted" href="#">谷物</a></li>
+			                <li><a class="uk-text-muted" href="#">肉禽</a></li>
 			                <li><a class="uk-text-muted" href="#">其他</a></li>
 			            </ul>
 			        </div>
 			    </li>
 			    
 			    <li class="uk-text-center" data-uk-dropdown="{mode:'hover',pos:'bottom-center'}">
-			    	<a class="uk-text-muted" href="#">宠物寄养</a>
+			    	<a class="uk-text-muted" href="#">暂定目录</a>
 			    	<div class="uk-dropdown uk-dropdown-small">
 			            <ul class="uk-nav uk-nav-dropdown">
-			                <li><a class="uk-text-muted" href="#">寄养店铺</a></li>
-			                <li><a class="uk-text-muted" href="#">寄养查看</a></li>
+			                <li><a class="uk-text-muted" href="#">暂定目录</a></li>
+			                <li><a class="uk-text-muted" href="#">暂定目录</a></li>
 			            </ul>
 			        </div>
 			    </li>
-			    <li class="uk-text-center"><a class="uk-text-muted" href="#">宠物医院</a></li>
+			    <li class="uk-text-center"><a class="uk-text-muted" href="#">暂定目录</a></li>
 			    <li class="uk-text-center"><a class="uk-text-muted" href="#">关于我们</a></li>
 			    <li class="uk-text-center"><a class="uk-text-muted" href="#">暂定目录</a></li>
 			</ul>
 		</div>
 	</div>
 
-	<div class="uk-width-medium-1-1 broadcast">
-		<div class="uk-slidenav-position" data-uk-slideshow>
-			<ul class="uk-slideshow" data-uk-slideshow="{kenburns:true,autoplay:true}">
-			    <li><img class="uk-img-preserve" src="images/lunbo1.jpg" width="1280px" height="440px" alt=""></li>
-			    <li><img class="uk-img-preserve" src="images/lunbo2.jpg" width="1280px" height="440px" alt=""></li>
-			</ul>
+	<div class="uk-margin-large-top broadcast">
+		<div class="uk-width-medium-1-1">
+			<div class="uk-slidenav-position" data-uk-slideshow>
+				<ul class="uk-slideshow" data-uk-slideshow="{kenburns:true,autoplay:true}">
+				    <li><img class="uk-img-preserve" src="images/lunbo1.jpg" width="1280px" height="440px" alt=""></li>
+				    <li><img class="uk-img-preserve" src="images/lunbo2.jpg" width="1280px" height="440px" alt=""></li>
+				</ul>
 
-			<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
-		    <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+				<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+			    <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
 
-		   
+			   
 
-		    <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
-		        <li data-uk-slideshow-item="0" class="uk-active"><a href=""></a></li>
-		        <li data-uk-slideshow-item="1"><a href=""></a></li>
-		    </ul>
+			    <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+			        <li data-uk-slideshow-item="0" class="uk-active"><a href=""></a></li>
+			        <li data-uk-slideshow-item="1"><a href=""></a></li>
+			    </ul>
 
+	    	</div>
     	</div>
 	</div>
 
-	<div class="uk-margin-large-top goods">
+	<div class="uk-margin-large-top newgoods">
 		<div class="uk-width-medium-2-3 uk-container-center goods_new">
 			<div class="uk-grid uk-grid-medium goods_title" data-uk-scrollspy="{cls:'uk-animation-slide-bottom uk-invisible', target:'> div > .uk-panel', delay:300, repeat: true}">
 				<div class="uk-width-medium-1-1 uk-row-first">
 					<div class="uk-panel uk-scrollspy-init-inview uk-scrollspy-inview uk-invisible">
 						<span class="uk-h2 uk-margin-small-right">近日上新</span>
-						<span class="uk-h4 uk-text-muted">New Products</h3>
+						<span class="uk-text-success uk-text-small">New Products</h3>
 						<span class="uk-h4 uk-float-right uk-text-small uk-text-center goods_title_content">
 							<a class="uk-text-muted" href="#">
 								<span class="uk-margin-small-right">+</span>
@@ -152,15 +146,15 @@
 
 								<div class="uk-panel uk-panel-header uk-panel-header">
 	                                <h3 class="uk-panel-title uk-margin-top uk-text-center">
-	                                	卡拉加菲猫
+	                                	有机猕猴桃
 	                                </h3>
-	                                <div class="uk-text-muted uk-text-small uk-text-center">
+	                                <div class="uk-text-success uk-text-small uk-text-center">
 	                                	<i class="uk-icon-tag"></i>
-		              					猫狗类
+		              					水果
 	                                </div>
 	  
 			                        <div class="uk-text-muted uk-text-small uk-text-center uk-text-truncate uk-margin-top">
-			                        	一只可爱的小喵超级乖那种。
+			                        	源自大自然的亲切味道，充满原生大自然的味道。
 		              				</div>
 	                            </div>
 
@@ -173,20 +167,20 @@
                     	<a href="#">
 	                        <div class="uk-panel uk-panel-box uk-scrollspy-inview uk-invisible goods_box">
 	                        	<figure class="uk-overlay uk-overlay-hover">
-								    <img class="uk-overlay-scale" src="images/1.jpg" width="100%" height="100%" alt="">
+								    <img class="uk-overlay-scale" src="images/2.jpg" width="100%" height="100%" alt="">
 								</figure>
 
 								<div class="uk-panel uk-panel-header uk-panel-header">
 	                                <h3 class="uk-panel-title uk-margin-top uk-text-center">
-	                                	卡拉加菲猫
+	                                	有机枇杷
 	                                </h3>
-	                                <div class="uk-text-muted uk-text-small uk-text-center">
+	                                <div class="uk-text-success uk-text-small uk-text-center">
 	                                		<i class="uk-icon-tag"></i>
-		              						猫狗类
+		              						水果
 	                                </div>
 	  
 			                        <div class="uk-text-muted uk-text-small uk-text-center uk-text-truncate uk-margin-top">
-			                        	一只可爱的小喵超级乖那种。
+			                        	源自大自然的亲切味道，充满原生大自然的味道。
 		              				</div>
 	                            </div>
 
@@ -199,20 +193,20 @@
                     	<a href="#">
 	                        <div class="uk-panel uk-panel-box uk-scrollspy-inview uk-invisible goods_box">
 	                        	<figure class="uk-overlay uk-overlay-hover">
-								    <img class="uk-overlay-scale" src="images/1.jpg" width="100%" height="100%" alt="">
+								    <img class="uk-overlay-scale" src="images/3.jpg" width="100%" height="100%" alt="">
 								</figure>
 
 								<div class="uk-panel uk-panel-header uk-panel-header">
 	                                <h3 class="uk-panel-title uk-margin-top uk-text-center">
-	                                	卡拉加菲猫
+	                                	有机葡萄
 	                                </h3>
-	                                <div class="uk-text-muted uk-text-small uk-text-center">
+	                                <div class="uk-text-success uk-text-small uk-text-center">
 	                                	<i class="uk-icon-tag"></i>
-		              					猫狗类
+		              					水果
 	                                </div>
 	  
 			                        <div class="uk-text-muted uk-text-small uk-text-center uk-text-truncate uk-margin-top">
-			                        	一只可爱的小喵超级乖那种。
+			                        	源自大自然的亲切味道，充满原生大自然的味道。
 		              				</div>
 	                            </div>
 
@@ -225,20 +219,20 @@
                     	<a href="#">
 	                        <div class="uk-panel uk-panel-box uk-scrollspy-inview uk-invisible goods_box">
 	                        	<figure class="uk-overlay uk-overlay-hover">
-								    <img class="uk-overlay-scale" src="images/1.jpg" width="100%" height="100%" alt="">
+								    <img class="uk-overlay-scale" src="images/4.jpg" width="100%" height="100%" alt="">
 								</figure>
 
 								<div class="uk-panel uk-panel-header uk-panel-header">
 	                                <h3 class="uk-panel-title uk-margin-top uk-text-center">
-	                                	卡拉加菲猫
+	                                	有机香蕉
 	                                </h3>
-	                                <div class="uk-text-muted uk-text-small uk-text-center">
+	                                <div class="uk-text-success uk-text-small uk-text-center">
 	                                	<i class="uk-icon-tag"></i>
-		              					猫狗类
+		              					水果
 	                                </div>
 	  
 			                        <div class="uk-text-muted uk-text-small uk-text-center uk-text-truncate uk-margin-top">
-			                        	一只可爱的小喵超级乖那种。
+			                        	源自大自然的亲切味道，充满原生大自然的味道。
 		              				</div>
 	                            </div>
 
@@ -251,13 +245,13 @@
 		</div>
 	</div>
 
-	<div class="uk-margin-large-top goods">
+	<div class="uk-margin-large-top activitygoods">
 		<div class="uk-width-medium-2-3 uk-container-center goods_hot">
 			<div class="uk-grid uk-grid-medium goods_title" data-uk-scrollspy="{cls:'uk-animation-slide-bottom uk-invisible', target:'> div > .uk-panel', delay:300, repeat: true}">
 				<div class="uk-width-medium-1-1 uk-row-first">
 					<div class="uk-panel uk-scrollspy-init-inview uk-scrollspy-inview uk-invisible">
 						<span class="uk-h2 uk-margin-small-right">活动促销</span>
-						<span class="uk-h4 uk-text-muted">Sales Promotion</h3>
+						<span class="uk-text-success uk-text-small">Sales Promotion</h3>
 						<span class="uk-h4 uk-float-right uk-text-small uk-text-center goods_title_content">
 							<a class="uk-text-muted" href="#">
 								<span class="uk-margin-small-right">+</span>
@@ -275,20 +269,20 @@
                     	<a href="#">
 	                        <div class="uk-panel uk-panel-box uk-scrollspy-init-inview uk-scrollspy-inview uk-invisible goods_box">
 	                        	<figure class="uk-overlay uk-overlay-hover">
-								    <img class="uk-overlay-scale" src="images/1.jpg" width="100%" height="100%" alt="">
+								    <img class="uk-overlay-scale" src="images/5.jpg" width="100%" height="100%" alt="">
 								</figure>
 
 								<div class="uk-panel uk-panel-header uk-panel-header">
 	                                <h3 class="uk-panel-title uk-margin-top uk-text-center">
-	                                	卡拉加菲猫
+	                                	有机菠萝
 	                                </h3>
-	                                <div class="uk-text-muted uk-text-small uk-text-center">
+	                                <div class="uk-text-success uk-text-small uk-text-center">
 	                                	<i class="uk-icon-tag"></i>
-		              					猫狗类
+		              					水果
 	                                </div>
 	  
 			                        <div class="uk-text-muted uk-text-small uk-text-center uk-text-truncate uk-margin-top">
-			                        	一只可爱的小喵超级乖那种。
+			                        	源自大自然的亲切味道，充满原生大自然的味道。
 		              				</div>
 	                            </div>
 
@@ -301,20 +295,20 @@
                     	<a href="#">
 	                        <div class="uk-panel uk-panel-box uk-scrollspy-inview uk-invisible goods_box">
 	                        	<figure class="uk-overlay uk-overlay-hover">
-								    <img class="uk-overlay-scale" src="images/1.jpg" width="100%" height="100%" alt="">
+								    <img class="uk-overlay-scale" src="images/6.jpg" width="100%" height="100%" alt="">
 								</figure>
 
 								<div class="uk-panel uk-panel-header uk-panel-header">
 	                                <h3 class="uk-panel-title uk-margin-top uk-text-center">
-	                                	卡拉加菲猫
+	                                	有机白菜
 	                                </h3>
-	                                <div class="uk-text-muted uk-text-small uk-text-center">
+	                                <div class="uk-text-success uk-text-small uk-text-center">
 	                                		<i class="uk-icon-tag"></i>
-		              						猫狗类
+		              						蔬菜
 	                                </div>
 	  
 			                        <div class="uk-text-muted uk-text-small uk-text-center uk-text-truncate uk-margin-top">
-			                        	一只可爱的小喵超级乖那种。
+			                        	源自大自然的亲切味道，充满原生大自然的味道。
 		              				</div>
 	                            </div>
 
@@ -327,20 +321,20 @@
                     	<a href="#">
 	                        <div class="uk-panel uk-panel-box uk-scrollspy-inview uk-invisible goods_box">
 	                        	<figure class="uk-overlay uk-overlay-hover">
-								    <img class="uk-overlay-scale" src="images/1.jpg" width="100%" height="100%" alt="">
+								    <img class="uk-overlay-scale" src="images/4.jpg" width="100%" height="100%" alt="">
 								</figure>
 
 								<div class="uk-panel uk-panel-header uk-panel-header">
 	                                <h3 class="uk-panel-title uk-margin-top uk-text-center">
-	                                	卡拉加菲猫
+	                                	有机香蕉
 	                                </h3>
-	                                <div class="uk-text-muted uk-text-small uk-text-center">
+	                                <div class="uk-text-success uk-text-small uk-text-center">
 	                                	<i class="uk-icon-tag"></i>
-		              					猫狗类
+		              					水果
 	                                </div>
 	  
 			                        <div class="uk-text-muted uk-text-small uk-text-center uk-text-truncate uk-margin-top">
-			                        	一只可爱的小喵超级乖那种。
+			                        	源自大自然的亲切味道，充满原生大自然的味道。
 		              				</div>
 	                            </div>
 
@@ -353,20 +347,20 @@
                     	<a href="#">
 	                        <div class="uk-panel uk-panel-box uk-scrollspy-inview uk-invisible goods_box">
 	                        	<figure class="uk-overlay uk-overlay-hover">
-								    <img class="uk-overlay-scale" src="images/1.jpg" width="100%" height="100%" alt="">
+								    <img class="uk-overlay-scale" src="images/9.jpg" width="100%" height="100%" alt="">
 								</figure>
 
 								<div class="uk-panel uk-panel-header uk-panel-header">
 	                                <h3 class="uk-panel-title uk-margin-top uk-text-center">
-	                                	卡拉加菲猫
+	                                	有机番茄
 	                                </h3>
-	                                <div class="uk-text-muted uk-text-small uk-text-center">
+	                                <div class="uk-text-success uk-text-small uk-text-center">
 	                                	<i class="uk-icon-tag"></i>
-		              					猫狗类
+		              					蔬菜
 	                                </div>
 	  
 			                        <div class="uk-text-muted uk-text-small uk-text-center uk-text-truncate uk-margin-top">
-			                        	一只可爱的小喵超级乖那种。
+			                        	源自大自然的亲切味道，充满原生大自然的味道。
 		              				</div>
 	                            </div>
 
@@ -380,7 +374,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<div class="uk-margin-large-top service">
 		<div class="uk-width-medium-2-3 uk-container-center">

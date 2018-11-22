@@ -1,7 +1,28 @@
 
+	.header,.header nav,.search_box{
+		background-color:#77CC5B;
+	}
+
+	.header a:hover{
+		background-color:#77BE5B !important;
+	}
+
+
+	#search input{
+		background-color:#fff;
+		color:#686868;
+	}
 
 	.goods_boxs a,.goods_title a, .footer a{
 		text-decoration:none;
+	}
+
+	.goods_boxs h3:hover{
+		color:#4bb344;
+	}
+
+	.goods_title_content:hover{
+		border:1px solid #4bb344;
 	}
 
 	.goods_box{
@@ -15,17 +36,17 @@
 	}
 
 	.nav_ul li a:hover,.footer a:hover{
-		color:#707070 !important;
+		color:#40c32f !important;
 	}
 	
 	/*下拉列表特效*/
 	.uk-dropdown{
-		opacity:0.95;
 		border-radius:.2rem;
+		background-color:#fff;
 	}
 
 	.uk-dropdown li a:hover{
-		background: #555;  
+		background: #4bb344;  
 		display: block;
 		color:#fff !important;
 	}
@@ -71,4 +92,4 @@
 		float:none !important;
 	}
 	
-
+	
